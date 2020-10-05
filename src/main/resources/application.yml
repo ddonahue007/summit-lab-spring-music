@@ -1,6 +1,6 @@
 spring:
   application:
-    name: summit-lab-spring-music
+    name: summit-lab-spring-trades
   main:
     allow-bean-definition-overriding: true
   jpa:

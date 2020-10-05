@@ -1,0 +1,32 @@
+<div class="modal-header">
+    <h3 ng-show="tradeAction === 'add'">Add an trade</h3>
+    <h3 ng-show="tradeAction === 'update'">Edit an trade</h3>
+</div>
+<div class="modal-body">
+    <form name="tradeForm" role="form">
+        <div class="form-group has-feedback" ng-class="{'has-warning': tradeForm.time.$invalid, 'has-success': tradeForm.time.$valid}">
+            <label for="time">Trade Time</label>
+            <input type="text" class="form-control input-large" id="title" name="title" required ng-model="trade.title">
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.title.$invalid, 'glyphicon-ok': tradeForm.title.$valid}"></span>
+        </div>
+        <div class="form-group has-feedback" ng-class="{'has-warning': tradeForm.artist.$invalid, 'has-success': tradeForm.artist.$valid}">
+            <label for="artist">Artist</label>
+            <input type="text" class="form-control input-large" id="artist" name="artist" required ng-model="trade.artist">
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.artist.$invalid, 'glyphicon-ok': tradeForm.artist.$valid}"></span>
+        </div>
+        <div class="form-group has-feedback" ng-class="{'has-warning': tradeForm.releaseYear.$invalid, 'has-success': tradeForm.releaseYear.$valid}">
+            <label for="releaseYear">Release Year</label>
+            <input type="text" class="form-control input-small" id="releaseYear" name="releaseYear" required ng-model="trade.releaseYear" ng-pattern=yearPattern>
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.releaseYear.$invalid, 'glyphicon-ok': tradeForm.releaseYear.$valid}"></span>
+        </div>
+        <div class="form-group has-feedback" ng-class="{'has-warning': tradeForm.genre.$invalid, 'has-success': tradeForm.genre.$valid}">
+            <label for="genre">Genre</label>
+            <input type="text" class="form-control input-medium" id=genre name="genre" required ng-model="trade.genre">
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.genre.$invalid, 'glyphicon-ok': tradeForm.genre.$valid}"></span>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary btn-md active" ng-disabled="tradeForm.$invalid" ng-click="ok()" >OK</button>
+    <button class="btn btn-warning btn-md active" ng-click="cancel()">Cancel</button>
+</div>

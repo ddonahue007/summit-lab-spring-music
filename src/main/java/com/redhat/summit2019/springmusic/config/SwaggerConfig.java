@@ -51,10 +51,9 @@ public class SwaggerConfig {
 
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
-			.title("Red Hat Summit 2019 - Spring Music")
-			.description("Red Hat Summit 2019 sample application - Spring Music")
+			.title("Red Hat Summit 2019 - Spring Trades")
+			.description("Red Hat Summit 2019 sample application - Spring Trades")
 			.version("1.0")
-			.contact(new Contact("Eric Deandrea", "https://github.com/edeandrea/summit-lab-spring-music", "edeandrea@redhat.com"))
 			.build();
 	}
 }

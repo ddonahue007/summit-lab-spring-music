@@ -1,11 +1,11 @@
 apiVersion: 1.0.0
 metadata:
-  name: spring-music
+  name: spring-trades
 projects:
-  - name: summit-lab-spring-music
+  - name: summit-lab-spring-trades
     source:
       type: git
-      location: 'https://github.com/edeandrea/summit-lab-spring-music.git'
+      location: 'https://github.com/ddonahue007/summit-lab-spring-music.git'
 components:
   - id: redhat/dependency-analytics/latest
     type: chePlugin
@@ -17,14 +17,14 @@ components:
     type: chePlugin
   - mountSources: true
     endpoints:
-      - name: spring-music
+      - name: spring-trade
         port: 8080
     memoryLimit: 2048Mi
     type: dockerimage
     volumes:
       - name: m2
         containerPath: /home/jboss/.m2
-    alias: spring-music
+    alias: spring-trades
     image: 'registry.redhat.io/codeready-workspaces/stacks-java-rhel8:2.0'
 commands:
   - name: Build
@@ -32,25 +32,25 @@ commands:
       - type: exec
         workdir: '/${CHE_PROJECTS_ROOT}/summit-lab-spring-music'
         command: mvn clean install
-        component: spring-music
+        component: spring-trades
   - name: Run application locally
     actions:
       - type: exec
         workdir: '/${CHE_PROJECTS_ROOT}/summit-lab-spring-music'
         command: mvn clean spring-boot:run
-        component: spring-music
+        component: spring-trades
   - name: Dependency analysis
     actions:
       - type: exec
         workdir: '${CHE_PROJECTS_ROOT}/summit-lab-spring-music'
-        component: spring-music
+        component: spring-trades
         command: '${HOME}/stack-analysis.sh -f ${CHE_PROJECTS_ROOT}/summit-lab-spring-music/pom.xml -p ${CHE_PROJECTS_ROOT}/summit-lab-spring-music'
   - name: Deploy to OpenShift
     actions:
       - type: exec
         workdir: '/${CHE_PROJECTS_ROOT}/summit-lab-spring-music'
         command: mvn clean oc:deploy -Popenshift -DskipTests
-        component: spring-music
+        component: spring-trades
   - name: Remote debug
     actions:
       - type: vscode-launch
