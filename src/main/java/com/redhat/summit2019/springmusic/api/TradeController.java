@@ -47,7 +47,7 @@ public class TradeController {
 	)
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Trade update(@ApiParam(value = "The trade to update", required = true) @RequestBody @Valid Trade trade) {
-		LOGGER.info("Updating album {}", trade.getId());
+		LOGGER.info("Updating trade {}", trade.getId());
 		return this.repository.save(trade);
 	}
 

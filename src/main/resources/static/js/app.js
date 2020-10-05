@@ -1,4 +1,4 @@
-angular.module('SpringMusic', ['albums', 'errors', 'status', 'info', 'ngRoute', 'ui.directives']).
+angular.module('SpringTrade', ['trades', 'errors', 'status', 'info', 'ngRoute', 'ui.directives']).
     config(function ($locationProvider, $routeProvider) {
         // $locationProvider.html5Mode(true);
 
@@ -7,8 +7,8 @@ angular.module('SpringMusic', ['albums', 'errors', 'status', 'info', 'ngRoute', 
             templateUrl: 'templates/errors.html'
         });
         $routeProvider.otherwise({
-            controller: 'AlbumsController',
-            templateUrl: 'templates/albums.html'
+            controller: 'TradesController',
+            templateUrl: 'templates/trades.html'
         });
     }
 );
