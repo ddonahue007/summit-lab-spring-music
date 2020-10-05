@@ -2,7 +2,6 @@ package com.redhat.summit2019.springmusic.repositories;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.redhat.summit2019.springmusic.domain.Album;
 import com.redhat.summit2019.springmusic.domain.Trade;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
