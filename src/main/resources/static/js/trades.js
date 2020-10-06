@@ -104,7 +104,7 @@ function TradesController($scope, $modal, Trades, Trade, Status) {
 
     $scope.init = function() {
         list();
-        $scope.setTradesView("grid");
+        $scope.setTradesView("list");
         $scope.sortField = "name";
         $scope.sortDescending = false;
     };

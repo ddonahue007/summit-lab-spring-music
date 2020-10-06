@@ -2,10 +2,10 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>Trade Title</th>
+            <th>Time</th>
             <th>Ticker</th>
-            <th>Number of Shares</th>
-            <th>Price per Share</th>
+            <th>Shares Qty</th>
+            <th>Share Price</th>
             <th></th>
         </tr>
         </thead>
@@ -15,7 +15,7 @@
                 <in-place-edit field-name='time' input-type='text' input-class='input-large' model=trade>{{trade.time}}</in-place-edit>
             </td>
             <td>
-                <in-place-edit field-name='ticker' input-type='artist' input-class='input-large' model=trade>{{trade.ticker}}</in-place-edit>
+                <in-place-edit field-name='ticker' input-type='text' input-class='input-large' model=trade>{{trade.ticker}}</in-place-edit>
             </td>
             <td>
                 <in-place-edit field-name='num_shares' input-type='text' input-class='input-small' model=trade>{{trade.num_shares}}</in-place-edit>

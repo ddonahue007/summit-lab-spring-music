@@ -1,4 +1,23 @@
-Red Hat Summit 2019 Hands-on Lab
+ums-poc
 ============
 
-The source code from this was adapted from the well-known [Spring Music](https://github.com/cloudfoundry-samples/spring-music) sample application.
+build and package
+```
+> mvn clean package
+```
+
+create docker image
+```
+> docker build -t <user_name>/spring-trades .
+```
+
+To run docker image locally
+```
+docker run -p 8080:8080 --name spring-trades <user_name>/spring-trades:latest
+```
+
+push docker image
+```
+docker push <user_name>/spring-trades
+```
+

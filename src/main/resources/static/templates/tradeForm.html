@@ -6,23 +6,23 @@
     <form name="tradeForm" role="form">
         <div class="form-group has-feedback" ng-class="{'has-warning': tradeForm.time.$invalid, 'has-success': tradeForm.time.$valid}">
             <label for="time">Trade Time</label>
-            <input type="text" class="form-control input-large" id="title" name="title" required ng-model="trade.title">
-            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.title.$invalid, 'glyphicon-ok': tradeForm.title.$valid}"></span>
+            <input type="text" class="form-control input-large" id="time" name="time" required ng-model="trade.time">
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.time.$invalid, 'glyphicon-ok': tradeForm.time.$valid}"></span>
         </div>
-        <div class="form-group has-feedback" ng-class="{'has-warning': tradeForm.artist.$invalid, 'has-success': tradeForm.artist.$valid}">
-            <label for="artist">Artist</label>
-            <input type="text" class="form-control input-large" id="artist" name="artist" required ng-model="trade.artist">
-            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.artist.$invalid, 'glyphicon-ok': tradeForm.artist.$valid}"></span>
+        <div class="form-group has-feedback" ng-class="{'has-warning': tradeForm.ticker.$invalid, 'has-success': tradeForm.ticker.$valid}">
+            <label for="ticker">Ticker</label>
+            <input type="text" class="form-control input-large" id="ticker" name="ticker" required ng-model="trade.ticker">
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.ticker.$invalid, 'glyphicon-ok': tradeForm.ticker.$valid}"></span>
         </div>
-        <div class="form-group has-feedback" ng-class="{'has-warning': tradeForm.releaseYear.$invalid, 'has-success': tradeForm.releaseYear.$valid}">
-            <label for="releaseYear">Release Year</label>
-            <input type="text" class="form-control input-small" id="releaseYear" name="releaseYear" required ng-model="trade.releaseYear" ng-pattern=yearPattern>
-            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.releaseYear.$invalid, 'glyphicon-ok': tradeForm.releaseYear.$valid}"></span>
+        <div class="form-group has-feedback" ng-class="{'has-warning': tradeForm.num_shares.$invalid, 'has-success': tradeForm.num_shares.$valid}">
+            <label for="num_shares">Share Qty</label>
+            <input type="text" class="form-control input-small" id="num_shares" name="num_shares" required ng-model="trade.num_shares">
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.num_shares.$invalid, 'glyphicon-ok': tradeForm.num_shares.$valid}"></span>
         </div>
-        <div class="form-group has-feedback" ng-class="{'has-warning': tradeForm.genre.$invalid, 'has-success': tradeForm.genre.$valid}">
-            <label for="genre">Genre</label>
-            <input type="text" class="form-control input-medium" id=genre name="genre" required ng-model="trade.genre">
-            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.genre.$invalid, 'glyphicon-ok': tradeForm.genre.$valid}"></span>
+        <div class="form-group has-feedback" ng-class="{'has-warning': tradeForm.price.$invalid, 'has-success': tradeForm.price.$valid}">
+            <label for="price">Share Price</label>
+            <input type="text" class="form-control input-medium" id=price name="price" required ng-model="trade.price">
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': tradeForm.price.$invalid, 'glyphicon-ok': tradeForm.price.$valid}"></span>
         </div>
     </form>
 </div>
