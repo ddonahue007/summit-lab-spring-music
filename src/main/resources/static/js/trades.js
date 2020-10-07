@@ -47,6 +47,29 @@ function TradesController($scope, $modal, Trades, Trade, Status) {
             }
         );
     }
+    function addTrade(trade) {
+        Trades.save(trade,
+            function () {
+                Status.success("Trade saved");
+                list();
+            },
+            function (result) {
+                Status.error("Error saving trade: " + result.status);
+            }
+        );
+    }
+
+    function updateTrade(trade) {
+        Trade.update(trade,
+            function () {
+                Status.success("Trade saved");
+                list();
+            },
+            function (result) {
+                Status.error("Error saving trade: " + result.status);
+            }
+        );
+    }
 
     $scope.addTrade = function () {
         var addModal = $modal.open({

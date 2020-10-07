@@ -31,7 +31,7 @@ public class TradeController {
 		return this.repository.findAll();
 	}
 
-	@ApiOperation(value = "Adds an trade", notes = "Adds an trade", nickname = "add-trade")
+	@ApiOperation(value = "Adds a trade", notes = "Adds a trade", nickname = "add-trade")
 	@ApiResponses(
 		@ApiResponse(code = 200, message = "Success!")
 	)
@@ -41,7 +41,7 @@ public class TradeController {
 		return this.repository.save(trade);
 	}
 
-	@ApiOperation(value = "Updates an trade", notes = "Updates an trade", nickname = "update-trade")
+	@ApiOperation(value = "Updates a trade", notes = "Updates a trade", nickname = "update-trade")
 	@ApiResponses(
 		@ApiResponse(code = 200, message = "Success!")
 	)
@@ -51,7 +51,7 @@ public class TradeController {
 		return this.repository.save(trade);
 	}
 
-	@ApiOperation(value = "Get an trade", notes = "Get an trade", nickname = "get-trade")
+	@ApiOperation(value = "Get a trade", notes = "Get a trade", nickname = "get-trade")
 	@ApiResponses(
 		@ApiResponse(code = 200, message = "Success!")
 	)
@@ -61,7 +61,7 @@ public class TradeController {
 		return this.repository.findById(id).orElse(null);
 	}
 
-	@ApiOperation(value = "Delete an trade", notes = "Delete an trade", nickname = "delete-trade")
+	@ApiOperation(value = "Delete a trade", notes = "Delete a trade", nickname = "delete-trade")
 	@ApiResponses(
 		@ApiResponse(code = 204, message = "Success!")
 	)

@@ -10,7 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-@ApiModel(description = "A Trade")
+@ApiModel(description = "A trade")
 public class Trade {
     @Id
     @Column(length = 40)
